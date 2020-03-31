@@ -10,8 +10,7 @@
     "prepublishOnly": "npm run build",
     "lint": "eslint src",
     "format": "prettier --write \"src/*.+(js|jsx||json|yml|yaml|css|scss|ts|tsx|graphql|vue|mjs)\" ",
-    "validate": "npm run lint && npm run test && npm run flow",
-    "precommit": "lint-staged && npm run test && npm run flow"
+    "validate": "npm run lint && npm run test && npm run flow"
   },
   "repository": {
     "type": "git",
@@ -67,8 +66,7 @@
     "react-test-renderer": "^16.6.0",
     "rollup": "^1.27.13",
     "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-uglify": "^6.0.4"
+    "rollup-plugin-node-resolve": "^3.4.0"
   },
   "browserslist": [
     "last 2 version",

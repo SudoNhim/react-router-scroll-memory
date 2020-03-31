@@ -39,8 +39,6 @@ class ScrollMemory extends Component<ScrollProps> {
     const { location } = this.props;
     // location before change url
     const actual = location;
-    // location after change url
-    const next = nextProps.location;
     // the first page has not key, set "enter" for key
     const key = actual.key || "enter";
 

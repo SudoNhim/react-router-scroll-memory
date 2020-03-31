@@ -1,1 +1,1 @@
-module.exports = require('./dist/ScrollMemory.min.js');
+module.exports = require('./dist/ScrollMemory.js');
