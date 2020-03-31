@@ -39,6 +39,8 @@ class ScrollMemory extends Component<ScrollProps> {
     const { location } = this.props;
     // location before change url
     const actual = location;
+    // location after change url
+    const next = nextProps.location;
     // the first page has not key, set "enter" for key
     const key = actual.key || "enter";
 
@@ -46,6 +48,9 @@ class ScrollMemory extends Component<ScrollProps> {
     const scroll = this.props.elementID
       ? getScrollElement(this.props.elementID)
       : getScrollPage();
+
+    const locationChanged = (next.pathname !== actual.pathname ||
+        next.search !== actual.search);
 
     if (locationChanged) {
       // pass page or element scroll to top

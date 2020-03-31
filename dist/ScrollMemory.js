@@ -170,11 +170,14 @@ function (_Component) {
       if (!isBrowser()) return false;
       var location = this.props.location; // location before change url
 
-      var actual = location; // the first page has not key, set "enter" for key
+      var actual = location; // location after change url
+
+      var next = nextProps.location; // the first page has not key, set "enter" for key
 
       var key = actual.key || "enter"; // get scroll of the page or the element before change location
 
       var scroll = this.props.elementID ? getScrollElement(this.props.elementID) : getScrollPage();
+      var locationChanged = next.pathname !== actual.pathname || next.search !== actual.search;
 
       if (locationChanged) {
         // pass page or element scroll to top
