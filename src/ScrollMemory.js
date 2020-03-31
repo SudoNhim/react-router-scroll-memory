@@ -44,11 +44,6 @@ class ScrollMemory extends Component<ScrollProps> {
     // the first page has not key, set "enter" for key
     const key = actual.key || "enter";
 
-    // if hash => let the normal operation of the browser
-    const locationChanged = (next.pathname !== actual.pathname ||
-      next.search !== actual.search) &&
-      next.hash === "";
-
     // get scroll of the page or the element before change location
     const scroll = this.props.elementID
       ? getScrollElement(this.props.elementID)
